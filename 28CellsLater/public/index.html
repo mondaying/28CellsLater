@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>28 Cells Later the game</title>
+<link rel="stylesheet" type="text/css" href="main.css" media="screen" >
+<link rel="stylesheet" type="text/css" href="modal.css" media="screen" >
+</head>
+
+<body>
+<div id='titleBar'>
+    <h2>28 Cells Later</h2>
+</div>
+<ul id="scoreBoard">
+    <li class="playerInfo template">
+        <div class="playerScore"><span class="scoreValue">50</span><sup>%</sup></div>
+        <div class="playerDet">
+            <div class="playerName">Joueur 1</div>
+            <div><span class="nbCell">9</span> Cells and <span class="nbPoint">9</span> points</div>
+        </div>
+    </li>
+</ul>
+
+<div class="modal" id="game-select-modal" aria-hidden="false">
+    <!--Hack dégeu--><a style="display:false;" id="showModal" href="#game-select-modal"></a>
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <h2>Choose a game (<span id="nbGame">x</span> available)</h2>
+      <a href="#" id="hideModalSelectGame" class="btn-close" aria-hidden="false">×</a>
+    </div>
+    <div class="modal-body">
+        <select id="select-game" size="10" style="width:200px;">
+        </select> 
+    </div>
+    <div class="modal-footer">
+      <a href="#" id="createNewG" class="btn">Create new</a>
+      <a href="#" id="chooseG" class="btn">Join!</a>
+    </div>
+  </div>
+</div>
+
+<div id='gameScreen'>
+    <canvas width="800px" height="400px" id='obstacles'></canvas>
+    <canvas width="800px" height="400px" id='liens'></canvas>
+    <canvas width="800px" height="400px" id='anims'></canvas>
+    <canvas width="800px" height="400px" id='cells'></canvas>
+    <canvas width="800px" height="400px" id='dessin'></canvas>
+</div>
+<div id="controlPanel">
+    <button id="connectBtn">Se connecter</button>
+</div>
+    <SCRIPT type="text/javascript" src="../tools/clone-obj.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="../tools/valid-obj.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="../tools/extend.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="../tools/errors.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="../tools/socket-wrapper.js"></SCRIPT>
+    
+    <SCRIPT type="text/javascript" src="../shapes/point.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="../shapes/segment.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="../shapes/rectangle.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="../shapes/cercle.js"></SCRIPT>
+    
+    <SCRIPT type="text/javascript" src="../ui/ui-config.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="../ui/ui-tools.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="../ui/scoreBoard.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="../ui/cercleUi.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="../ui/cellUi.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="../ui/lienUi.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="../ui/partieUi.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="../ui/gameSelector.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="../ui/ui-main.js"></SCRIPT>
+    <SCRIPT type="text/javascript" src="main.js"></SCRIPT>
+
+</body>
+</html>

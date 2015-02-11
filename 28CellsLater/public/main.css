@@ -1,0 +1,96 @@
+#gameScreen {
+    position:relative;
+    width:800px;
+    height:400px;
+    margin:auto;
+}
+#gameScreen > canvas {
+    position:absolute;
+    left:0;
+    top:0;
+    border:none;
+    background-color: transparent;
+    display:block;
+    margin:auto;
+}
+
+#liens {
+    z-index:1;
+}
+#obstacles {
+    z-index:2;
+}
+#anims {
+    z-index:3;
+}
+#cells {
+    z-index:4;
+}
+#dessin {
+    z-index:5;
+}
+#titleBar, #scoreBoard{
+    cursor:default;
+     -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#titleBar {
+
+    text-align: center;
+    font: 50px 'Arial';
+    color: white;
+}
+
+body {
+    font-family: 'Helvetica', arial;
+    margin: 40px;
+    background-image: url(./img/virus.jpg);
+}
+
+#scoreBoard {
+    color:white;
+    width:260px;
+    position:fixed;
+    top:100px;
+    right:50px;
+    z-index:10px;
+}
+
+#scoreBoard li.template{
+    display:none;
+}
+
+#scoreBoard li{
+    background:rgba(0, 0, 0,0.7);
+    border-radius: 15px;
+    list-style-type:none;
+    margin-bottom:5px;
+}
+
+.playerInfo > div{
+    display:inline-block;
+}
+
+.playerInfo .playerScore{
+    font-size:50px;
+    padding-left:10px;
+}
+
+.playerInfo .playerDet{
+    margin-left:10px;
+}
+
+.playerInfo .playerScore sup{
+  vertical-align:text-top; 
+    line-height:150%;
+    font-size:50%;
+}
+
+
+.select-game{
+    margin-left:20%;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "_28CellsLater",
+  "version": "0.0.0",
+  "description": "28CellsLater",
+  "main": "app.js",
+  "author": {
+    "name": "Vincent",
+    "email": ""
+  },
+  "dependencies": {
+    "ws": "^0.4.32"
+  },
+  "optionalDependencies": {}
+}
